@@ -1,0 +1,214 @@
+site_name: Wayne's blogs
+site_url: https://q1ucheng.github.io/blogs/
+site_author: Wayne
+
+# Repository, 用于生成右上角的仓库链接
+repo_name: Q1ucheng/blogs
+repo_url: https://github.com/Q1ucheng/blogs
+
+theme:
+  icon:
+    repo: fontawesome/brands/github    # 更改右上角仓库图标
+    logo: material/marker              # 更改左上角网站logo(marker是一支钢笔)
+    # admonition:
+    #   <type>: <icon> 
+  name: material
+  features:
+    - navigation.top   # 返回顶部的按钮 在上滑时出现
+    - admonition
+    - navigation.footer
+    - navigation.tabs
+    - navigation.sections
+    - navigation.path
+    - toc.follow
+    - content.tabs.link
+    - content.code.copy
+    - content.code.select
+  highlightjs: true
+  palette: 
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      accent: cyan
+      primary: white
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      accent: indigo
+      primary: black
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+nav:
+  - Home: index.md
+  - CS61A:
+    - introduction: Note/CS61A/1.CS61A_Structure_and_Interpretation_of_Computer_Programs.md
+    - Functions: Note/CS61A/2.Functions.md
+    - Control: Note/CS61A/3.Control.md
+    - Higher-Order Function: Note/CS61A/4.Higher-Order_function.md
+    - Environments: Note/CS61A/5.Environments.md
+    - Function example: Note/CS61A/6.Function_example.md
+    - Recursive Function: Note/CS61A/7.Recursive_function.md
+    - Tree Recursion: Note/CS61A/8.Tree_recursion.md
+    - Containers:  Note/CS61A/9.Containers.md
+    - Data abstraction: Note/CS61A/10.Data_abstraction.md
+    - Trees: Note/CS61A/11.Trees.md
+    - Mutable Values: Note/CS61A/12.Mutable_values.md
+    - HW03: Note/CS61A/HW03.md
+    - Mutable Function: Note/CS61A/13.Mutable_functions.md
+    - Iterators: Note/CS61A/14.Iterators.md
+    - Object: Note/CS61A/15.Object.md
+    - HW04: Note/CS61A/HW04.md
+    - Inheritance: Note/CS61A/16.Inheritance.md 
+    - Project Ants: Note/CS61A/Ants.md
+    - Representation: Note/CS61A/17.Representation.md
+    - Composition: Note/CS61A/18.Composition.md
+    - Efficiency: Note/CS61A/19.Efficiency.md 
+    - Lab08's Option Problems: Note/CS61A/Lab08's_Optional_Problems.md
+    - Decomposition & Data example: Note/CS61A/20.Decomposition.md
+    - Scheme: Note/CS61A/21.Scheme.md
+    - Calculation: Note/CS61A/22.Calculation.md
+    - Interpreters: Note/CS61A/23.Interpreters.md
+    - scals.zip: Note/CS61A/24.Scheme部分总和.md
+    - Lab11 & Scheme Project: Note/CS61A/25.Lab11.md
+    - Declarative Programming: Note/CS61A/26.Declarative_Programming.md
+    - Tables: Note/CS61A/27.Tables.md
+    - Aggregation: Note/CS61A/28.Aggregation.md
+    - Database(optional): Note/CS61A/29.Database.md
+    - Tail Calls(optional): Note/CS61A/30.Tail_Calls.md
+    - Macros(optional): Note/CS61A/31.Macros.md
+    - Final Example: Note/CS61A/32.Final_Example.md
+    - Conclusions🎉: Note/CS61A/Conclusions.md
+  - Note: 
+    # - CS61A Fall20:
+    #   - introduction: Note/CS61A/1. CS61A Structure and Interpretation of Computer Programs.md
+    #   - Functions: Note/CS61A/2. Functions.md
+    #   - Control: Note/CS61A/3. Control.md
+    #   - Higher-Order Function: Note/CS61A/4. Higher-Order Function.md
+    #   - Environments: Note/CS61A/5. Environments.md
+    #   - Function example: Note/CS61A/6. Function example.md
+    #   - Recursive Function: Note/CS61A/7. Recursive Function.md
+    #   - Tree Recursion: Note/CS61A/8. Tree Recursion.md
+    #   - Containers:  Note/CS61A/9. Containers.md
+    #   - Data abstraction: Note/CS61A/10. Data abstraction.md
+    #   - Trees: Note/CS61A/11. Trees.md
+    #   - Mutable Values: Note/CS61A/12. Mutable Values.md
+    - Git & Github & GitLab: 
+      - Git: Note/Git related/Git.md
+      - Github: Note/Git related/Github.md 
+    - MySQL:
+      - 记录学习使用MySQL的过程: Note/MySQL/Mysql_learning.md
+    - PyQt6 & PySide6:
+      - PyQt6/PySide6: Note/PyQt6&PySide6/PyQt6PySide6.md
+    - Numerical analysis:
+      - 计算方法第二章: Note/Numerical analysis/计算方法第二章.md
+      - NPUCM2024: Note/Numerical analysis/记录.md
+    - LaTeX related:
+      - 数学建模中的LaTeX代码: Note/LaTeX related/数学建模中的LaTeX代码.md
+    - Markdown related:
+      - 一些Markdown的用法: Note/Markdown related/practice.md
+    - MkDocs-material:
+      - MkDocs部署配置中error的解决: Note/Mkdocs-material/mkdocs部署配置中error的解决.md
+      - 设计MkDocs: Note/Mkdocs-material/mkdocs设计.md
+      - 尝试用HTML+CSS实现首页打字效果渲染: Note/Mkdocs-material/用HTML+CSS实现首页打字效果渲染.md
+  - Blog: Blog/Blog.md
+    
+extra_javascript:
+  - javascripts/katex.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  # - javascripts/mathjax.js
+  # - https://polyfill.io/v3/polyfill.min.js?features=es6
+  # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+# extra_css:
+#   - stylesheets/extra.css
+#   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+#   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+
+extra:
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/heart
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/heart-broken
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+  generator: false  #删除页脚显示“使用 MkDocs 材料制造”
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Q1ucheng
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/2001723051?spm_id_from=333.1007.0.0
+    - icon: fontawesome/solid/paper-plane
+      link: https://ronaldln.github.io/MyPamphlet/
+  alternate:
+    - name: English(功能未开放)
+      link: /en/ 
+      lang: en
+    - name: Chinese(功能未开放)
+      link: /zh/
+      lang: zh
+
+extra_css:
+  - stylesheets/extra.css
+  - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
+  # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+
+
+markdown_extensions:
+  - admonition  # 此配置启用告诫，允许使它们可折叠，并允许在告诫中嵌套任意内容
+  - pymdownx.details  # 此配置启用告诫，允许使它们可折叠，并允许在告诫中嵌套任意内容
+  - pymdownx.superfences:  # 此配置启用告诫，允许使它们可折叠，并允许在告诫中嵌套任意内容
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - abbr
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - meta # 支持Markdown文件上方自定义标题标签等
+  - pymdownx.arithmatex:  # latex支持
+      generic: true
+  - toc:
+      permalink: true # 固定标题位置为当前位置
+  - pymdownx.highlight: # 代码块高亮
+      anchor_linenums: true
+      linenums: true # 显示行号
+      auto_title: true # 显示编程语言名称
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.critic  # 突出显示文档的各个部分或应用特定格式
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+
+copyright: Copyright &copy; 2023 Wayne # 左下角的版权声明
+
+plugins:
+  - search:
+      lang:
+        - en
+        - zh
+  - git-revision-date-localized:
+      enable_creation_date: true

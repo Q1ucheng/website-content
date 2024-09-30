@@ -1,0 +1,2943 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Wayne">
+      
+      
+        <link rel="canonical" href="https://q1ucheng.github.io/blogs/Note/Numerical%20analysis/%E8%AE%B0%E5%BD%95/">
+      
+      
+        <link rel="prev" href="../%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E7%AC%AC%E4%BA%8C%E7%AB%A0/">
+      
+      
+        <link rel="next" href="../../LaTeX%20related/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%B8%AD%E7%9A%84LaTeX%E4%BB%A3%E7%A0%81/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+    
+    
+      
+        <title>NPUCM2024 - Wayne's blogs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Wayne&#39;s blogs" class="md-header__button md-logo" aria-label="Wayne's blogs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.5 1.15c-.53 0-1.04.19-1.43.58l-5.81 5.82 5.65 5.65 5.82-5.81c.77-.78.77-2.04 0-2.83l-2.84-2.83c-.39-.39-.89-.58-1.39-.58M10.3 8.5l-5.96 5.96c-.78.78-.78 2.04.02 2.85C3.14 18.54 1.9 19.77.67 21h5.66l.86-.86c.78.76 2.03.75 2.81-.02l5.95-5.96"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Wayne's blogs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NPUCM2024
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/en/" hreflang="en" class="md-select__link">
+              English(功能未开放)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/zh/" hreflang="zh" class="md-select__link">
+              Chinese(功能未开放)
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Q1ucheng/blogs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Q1ucheng/blogs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../CS61A/1.CS61A_Structure_and_Interpretation_of_Computer_Programs/" class="md-tabs__link">
+          
+  
+  CS61A
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../MySQL/Mysql_learning/" class="md-tabs__link">
+          
+  
+  Note
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Blog/Blog/" class="md-tabs__link">
+        
+  
+    
+  
+  Blog
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Wayne&#39;s blogs" class="md-nav__button md-logo" aria-label="Wayne's blogs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.5 1.15c-.53 0-1.04.19-1.43.58l-5.81 5.82 5.65 5.65 5.82-5.81c.77-.78.77-2.04 0-2.83l-2.84-2.83c-.39-.39-.89-.58-1.39-.58M10.3 8.5l-5.96 5.96c-.78.78-.78 2.04.02 2.85C3.14 18.54 1.9 19.77.67 21h5.66l.86-.86c.78.76 2.03.75 2.81-.02l5.95-5.96"/></svg>
+
+    </a>
+    Wayne's blogs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Q1ucheng/blogs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Q1ucheng/blogs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CS61A
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            CS61A
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/1.CS61A_Structure_and_Interpretation_of_Computer_Programs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/2.Functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/3.Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/4.Higher-Order_function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Higher-Order Function
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/5.Environments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/6.Function_example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Function example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/7.Recursive_function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recursive Function
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/8.Tree_recursion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tree Recursion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/9.Containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Containers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/10.Data_abstraction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data abstraction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/11.Trees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/12.Mutable_values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mutable Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/HW03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HW03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/13.Mutable_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mutable Function
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/14.Iterators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iterators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/15.Object/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/HW04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HW04
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/16.Inheritance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inheritance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/Ants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Ants
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/17.Representation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Representation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/18.Composition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Composition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/19.Efficiency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Efficiency
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/Lab08%27s_Optional_Problems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab08's Option Problems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/20.Decomposition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Decomposition & Data example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/21.Scheme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scheme
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/22.Calculation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calculation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/23.Interpreters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interpreters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/24.Scheme%E9%83%A8%E5%88%86%E6%80%BB%E5%92%8C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scals.zip
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/25.Lab11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab11 & Scheme Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/26.Declarative_Programming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Declarative Programming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/27.Tables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/28.Aggregation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aggregation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/29.Database/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database(optional)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/30.Tail_Calls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tail Calls(optional)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/31.Macros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macros(optional)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/32.Final_Example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/Conclusions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conclusions🎉
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Note
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Note
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    MySQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            MySQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySQL/Mysql_learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    记录学习使用MySQL的过程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    PyQt6 & PySide6
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            PyQt6 & PySide6
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyQt6%26PySide6/PyQt6PySide6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyQt6/PySide6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Numerical analysis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Numerical analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E7%AC%AC%E4%BA%8C%E7%AB%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算方法第二章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    NPUCM2024
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    NPUCM2024
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      模型假设
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题一
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="问题一">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wilcoxon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wilcoxon检验
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wilcoxonwilcoxon-rank-sum-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wilcoxon检验（Wilcoxon rank-sum test）：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      构建基因共表达网络
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#louvain" class="md-nav__link">
+    <span class="md-ellipsis">
+      基于Louvain算法的模块度优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      基因共表达网络分析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题二
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="问题二">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      模型选择
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xgboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      XGBoost分类模型的构建
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xgboost_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      XGBoost分类的准确性评估
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shap" class="md-nav__link">
+    <span class="md-ellipsis">
+      基于SHAP机器学习解释器的特征分析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      诊断标记物的识别准确性分析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题三
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="问题三">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meta回归和混合效应模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      亚组分析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      严格的样本选择和分层
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他可行的方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    LaTeX related
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            LaTeX related
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LaTeX%20related/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%B8%AD%E7%9A%84LaTeX%E4%BB%A3%E7%A0%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数学建模中的LaTeX代码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Markdown related
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Markdown related
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Markdown%20related/practice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一些Markdown的用法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    MkDocs-material
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            MkDocs-material
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mkdocs-material/mkdocs%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE%E4%B8%ADerror%E7%9A%84%E8%A7%A3%E5%86%B3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MkDocs部署配置中error的解决
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mkdocs-material/mkdocs%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    设计MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mkdocs-material/%E7%94%A8HTML%2BCSS%E5%AE%9E%E7%8E%B0%E9%A6%96%E9%A1%B5%E6%89%93%E5%AD%97%E6%95%88%E6%9E%9C%E6%B8%B2%E6%9F%93/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    尝试用HTML+CSS实现首页打字效果渲染
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Blog/Blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      模型假设
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题一
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="问题一">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wilcoxon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wilcoxon检验
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wilcoxonwilcoxon-rank-sum-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wilcoxon检验（Wilcoxon rank-sum test）：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      构建基因共表达网络
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#louvain" class="md-nav__link">
+    <span class="md-ellipsis">
+      基于Louvain算法的模块度优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      基因共表达网络分析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题二
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="问题二">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      模型选择
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xgboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      XGBoost分类模型的构建
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xgboost_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      XGBoost分类的准确性评估
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shap" class="md-nav__link">
+    <span class="md-ellipsis">
+      基于SHAP机器学习解释器的特征分析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      诊断标记物的识别准确性分析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题三
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="问题三">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meta回归和混合效应模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      亚组分析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      严格的样本选择和分层
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他可行的方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="_1">记录全国大学生数学建模竞赛西北工业大学校赛的过程<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>惊讶的是这次的校赛两道题均为数据题（本来是以为会有类似于国赛A的微分方程赛题，有点想尝试一下A的风格），两题差别不大，但由于B题只有两问且是一个较为基础的规划类问题（感觉能学习的东西不如A题多），遂选择了更符合我们做题习惯的A题</p>
+<blockquote>
+<p><strong>A</strong> <strong>癌症早诊标记物设计及其演化机理认知</strong></p>
+<p>癌症是一种遗传变异相关的疾病。在很多情况下，患者在确诊的时候就已经处于疾病的中晚期了，错过了治疗的最佳时机。因此，如何开展面向癌症早期的诊断标记物，一直以来都是临床医学面临的主要难题之一。</p>
+<p>目前的癌症诊断及病理分期判定，主要依赖肿瘤的大小、肿瘤是否转移、患者的生化指标、临床病理图像分析等手段，这些方法非常依赖检测的精准度和医生的临床经验。而根据生物学中心法则可知，基因是决定表观性状变化的根本因素。患者的肿瘤状态变化、生化指标变化、或病理图像的异常，往往会晚于基因数据的异常。因此，通过对基因数据的分析，有可能更早的发现癌症，为疾病的早诊提供了新的思路，也能够为更深入的了解癌症发生发展的机理提供更深的见解。</p>
+<p>基因表达数据就是这样一种常见的基因相关数据。它反映的是基因转录产物（如信使RNA，也叫mRNA）在细胞中的表达丰度。这些数据可以用于分析不同的条件下哪些基因的表达发生了改变、基因的活动是如何受外界条件的变化而变化、以及基因之间有何共表达关系。这些数据与特诊对于临床诊断标记物设计、癌症发生发展的机制认知等有着重要的作用。</p>
+<p>请仅根据题目所提供的数据，尝试回答下列问题：</p>
+<p>（1） 在癌症的早期与晚期，分别是哪些基因的表达发生了<strong>较为显著的变化</strong>，这些基因之间的<strong>关系</strong>如何？</p>
+<p>（2） 请设计或分析，哪些基因或基因之间关系<strong>所构成的特征能够被用来作为诊断的标记物</strong>，以此判定或分析患者当前的病理状态。请给出具体的量化指标（或特征集合），并评价所设计的诊断标记物的<strong>识别准确性</strong>；更具体的，<strong>给出早期癌症诊断标记物</strong>；</p>
+<p>（3） 不同的患者之间存在着极强的异质性，如何在分析过程中尽可能的<strong>消除异质性</strong>的影响？</p>
+<p>名词解释：</p>
+<p><strong>基因表达数据</strong>：基因转录产物在细胞中的表达丰度，用以描述当前基因的活跃状态；</p>
+<p><strong>生物标记物（或诊断标记物）：</strong>一种用于判定患者病理状态的特征，可以是某个或某些基因表达值，也可以是某些基因表达关系的某种量化值。通常，生物标记物希望规模越小越好，这样可以节省检测成本；使用生物标志物作为输入特征，可以输出或判定该患者的病理分期或病理状态；</p>
+<p><strong>异质性：</strong>数据之间的差异程度的一种描述。不同的患者，即使他们处于同一种病理阶段，他们的基因表达数据、生化指标、医学影像数据也存在着极大的差异性，会给数据分析带来较大的挑战；</p>
+<p>数据文件说明：</p>
+<p>（1） 附件1：Normal_exp.csv: 正常人的基因表达数据；</p>
+<p>（2） 附件2：EarlyStage_exp.csv：早期患者的基因表达数据；</p>
+<p>（3） 附件3：LaterStage_exp.csv：晚期患者的基因表达数据；</p>
+<p>上述文件中，第一行为表头，给出各个患者的样本ID（第一列除外）；第一列为基因名称，第二列至最后一列，为各个患者的基因表达值；</p>
+<p>参考文献：</p>
+<p>[1] https://ww2.mathworks.cn/help/bioinfo/ug/gene-expression-profile-analysis.html?requestedDomain=cn </p>
+<p>[2] Langfelder, P., Horvath, S. WGCNA: an R package for weighted correlation network analysis. <strong>BMC Bioinformatics</strong> <strong><em>*9*</em></strong>, 559 (2008). https://doi.org/10.1186/1471-2105-9-559</p>
+</blockquote>
+<p>首先看了下数据，压缩包中已经提供了正常人、早期患者、晚期患者的13163个基因的表达数据，关于“基因表达数据”题中所给的解释太简洁，查询了下了解到：</p>
+<blockquote>
+<p>基因表达数据通常以矩阵的形式呈现，其中行代表基因，列代表样本（通常是不同的生物体或实验条件）。每个元素表示对应基因在相应样本中的表达水平。</p>
+</blockquote>
+<h2 id="_2">模型假设<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>假设提供的基因表达数据不会因为患者的年龄性别等因素而有明显变化</li>
+<li>假设提供的基因表达数据均为正确真实的</li>
+</ul>
+<h2 id="_3">问题分析<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>针对问题一，要求找出在早晚期表达水平差异显著的基因，可以比较差异表达分析、t检验、Wilcoxon检验等差异分析方法，选定合适的差异检验方法来计算差异，以此提取出显著变化的基因，之后构建基因共表达网络并进行模块检测，采用Louvain算法进行模块度优化，据此可视化模块内基因之间的关系；根据基因表达数据和基因共表达网络，从共表达关系、共同调控关系两个方面分析基因之间的关系</p>
+<p>针对问题二，需要找出能够作为诊断特征的基因，以此判定或分析患者当前的病理状态。我们考虑将早期、晚期、正常人的基因表达数据随机打乱，比较多层感知机（MLP），支持向量机（SVM）和XGBoost三种模型，之后选定合适的算法对其进行分类，再可以通过机器学习解释性框架得出模型分类的依据排序，以此来确定能够作为诊断依据的基因。</p>
+<p>针对问题三，题中提到不同的患者之间存在着极强的异质性，需要在分析过程中尽可能的消除异质性的影响，异质性源于患者之间的生物学和环境差异。为了减少异质性对研究结果的影响，我们需要制定多种策略。可以通过严格的样本选择和分层来控制实验设计阶段的异质性，也可以尝试用亚组分析来揭示特定亚组的模式和异质性来源。也可以采用随机效应模型和Meta回归分析探索异质性体现显著的患者，最后在解释结果时应进行适当的敏感性分析</p>
+<h2 id="_4">问题一<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>问题一要求分析在癌症的早期与晚期，分别是哪些基因的表达发生了<strong>较为显著的变化</strong>，以及这些基因之间的<strong>关系</strong>，也就是要先对早期和晚期的基因表达数据进行差异性分析，考虑到：t检验适用于连续型变量且符合正态分布的情况，具有较高的效率和统计功效。它对样本量要求较小，适用于较小的样本量。Wilcoxon符号秩检验适用于连续型变量，对数据分布没有特定要求，可以处理非正态分布和有序分布的数据。它基于观察值的秩次进行比较，因此对异常值不敏感。我们最终确定选用<strong>Wilcoxon检验</strong></p>
+<h3 id="wilcoxon">Wilcoxon检验<a class="headerlink" href="#wilcoxon" title="Permanent link">&para;</a></h3>
+<blockquote>
+<h3 id="wilcoxonwilcoxon-rank-sum-test">Wilcoxon检验（Wilcoxon rank-sum test）：<a class="headerlink" href="#wilcoxonwilcoxon-rank-sum-test" title="Permanent link">&para;</a></h3>
+<p>在统计学中，Wilcoxon检验（也称为Wilcoxon秩和检验或Mann-Whitney U检验）用于比较两组样本中位数是否有显著差异。中位数是一组数据的中间值，当数据不服从正态分布时，中位数通常被用来代表数据的中心位置。</p>
+<p>Wilcoxon检验的原假设是两组样本的中位数相等，备择假设是两组样本的中位数不相等。通过对两组样本的秩次进行比较，Wilcoxon检验可以确定两组样本的中位数是否存在显著差异。</p>
+<p><strong>具体步骤如下</strong>：</p>
+<ol>
+<li><strong>数据合并和秩次分配</strong>：首先，将两组样本的数据合并，并按大小排序。然后，为每个数据分配一个秩次，其中最小的值为秩次1，依次递增，直至最大的值为秩次n（n为样本总数）。</li>
+<li><strong>计算秩和</strong>：对于每一组样本，计算其秩次之和。对于较小的样本组，记为W1，对于较大的样本组，记为W2。</li>
+<li><strong>计算Wilcoxon统计量</strong>：Wilcoxon统计量是两个秩和中较小的一个，即𝑊=min(𝑊1,𝑊2)<em>W</em>=min(<em>W</em>1,<em>W</em>2)。</li>
+<li><strong>计算p值</strong>：根据Wilcoxon统计量的分布，计算在原假设下获得观察到的或更极端统计量的概率。根据p值来判断在显著性水平（如α=0.05）下，是否拒绝原假设。</li>
+<li><strong>判断显著性</strong>：如果p值小于显著性水平，则拒绝原假设，认为两组样本的中位数存在显著差异；反之，则接受原假设，认为两组样本的中位数没有显著差异。</li>
+</ol>
+</blockquote>
+<p>通过Wilcoxon检验分析两个数据文件后，我们得到了每一个基因对应的Wilcoxon统计量和p值，经过以下筛选原则：</p>
+<ul>
+<li><strong>检查Wilcoxon统计量的符号</strong>：根据Wilcoxon统计量的正负，判断两组样本中哪一组的秩次之和更大。</li>
+<li><strong>p值检验</strong>：根据p值判断两组样本之间的差异是否显著。如果p值小于显著性水平0.05，则可以拒绝原假设，认为两组样本的中位数存在显著差异；反之，则接受原假设，认为两组样本的中位数没有显著差异。</li>
+</ul>
+<p>最终我们从13163个基因中初步筛选出了早晚期表达水平有明显差异的2120个基因。（下表为早晚期表达差异排名前十的基因）</p>
+<table>
+<thead>
+<tr>
+<th>Gene Name</th>
+<th>Wilcoxon Statistic</th>
+<th>p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TTC22</td>
+<td>5.507305</td>
+<td>3.64E-08</td>
+</tr>
+<tr>
+<td>CNN3</td>
+<td>5.018858</td>
+<td>5.20E-07</td>
+</tr>
+<tr>
+<td>PARP3</td>
+<td>4.876963</td>
+<td>1.08E-06</td>
+</tr>
+<tr>
+<td>ARMCX2</td>
+<td>4.780774</td>
+<td>1.75E-06</td>
+</tr>
+<tr>
+<td>CALM1</td>
+<td>-4.48266</td>
+<td>7.37E-06</td>
+</tr>
+<tr>
+<td>PIR</td>
+<td>-4.44718</td>
+<td>8.70E-06</td>
+</tr>
+<tr>
+<td>ZFP36L2</td>
+<td>4.417168</td>
+<td>1.00E-05</td>
+</tr>
+<tr>
+<td>RRM2</td>
+<td>-4.38238</td>
+<td>1.17E-05</td>
+</tr>
+<tr>
+<td>ALPK1</td>
+<td>4.367368</td>
+<td>1.26E-05</td>
+</tr>
+<tr>
+<td>C15orf23</td>
+<td>-4.36532</td>
+<td>1.27E-05</td>
+</tr>
+</tbody>
+</table>
+<p>找出了这些表达有明显差异的基因，就可以开始分析它们之间的关系。在<strong><em>Genes related to the very early stage of ConA-induced fulminant hepatitis: a gene-chip-based study in a mouse model</em></strong>一文中我了解到一种专门分析基因表达的方法——<strong>基因共表达网络</strong></p>
+<blockquote>
+<p><strong>基因共表达网络</strong>是一种用于分析基因表达数据的工具，它通过检测基因之间的相关性来揭示它们之间的功能联系和调控关系。这种网络通常是通过计算基因表达数据的相关系数或其他相似性度量来构建的。</p>
+<p>通过基因共表达网络分析方法，可以将在功能上相关的基因识别为一个模块（module）,通过对模块的进一步的分析，能够实现筛选module的核心基因，关联性状，代谢通路建模，建立基因互作网络等高级分析。Gene co-expression（基因共表达）是一种使用大量基因表达数据构建基因间的相关性，从而挖掘基因功能的一类分析方法。基因共表达网络（GeneCo-expreesion Network）是用来展现基因间相互作用关系的一种手段，是基于基因间表达数据而构建调控网络图。</p>
+</blockquote>
+<h3 id="_5">构建基因共表达网络<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>计算基因间的相关性</strong>：对于每一对基因，计算它们的相关系数</li>
+<li><strong>选择阈值</strong>：根据相关性度量的计算结果，选择一个适当的阈值来确定基因之间的连接。根据经验将其定为0.8</li>
+<li><strong>构建网络</strong>：根据选定的阈值0.8，构建基因共表达网络。在网络中，每个基因表示为网络中的一个节点，相关性高于阈值的基因对之间存在一条边。</li>
+<li>圆圈代表基因，直线代表基因之间存在调控关系。圆圈的大小代表degree值，即网络中某一基因与周围基因的关系数量，degree越大，代表与它有相互作用关系的基因越多。</li>
+<li>圆圈的颜色是按照k-core进行划分的聚类结果。k-core表示在一个子图中，所有的点至少连接着k个点，其用以评估基因在网络位置的中心程度，值越大表示degree越大且越中心。</li>
+<li>相同大小的k-core体现的是基因之间的相似性及功能相关性</li>
+</ol>
+<h3 id="louvain">基于Louvain算法的模块度优化<a class="headerlink" href="#louvain" title="Permanent link">&para;</a></h3>
+<p>Louvain算法是一种用于检测网络中社区结构的基于模块度优化的算法。社区结构指的是网络中节点的聚类，使得同一社区内的节点具有较高的内部连接性，而不同社区之间的连接性较低。Louvain算法旨在将网络中的节点分配到不同的社区中，以最大化网络的模块度。该算法具有高效性和可扩展性，并且在实践中被广泛应用于社交网络分析、生物网络分析、交通网络分析等领域。它能够帮助揭示复杂网络中的社区结构，从而有助于理解网络的组织结构、功能和调控机制。</p>
+<p>Louvain算法步骤：</p>
+<ol>
+<li><strong>定义模块度（Modularity）</strong>：模块度是一种用于评估社区结构质量的指标，它量化了网络中节点与其所在社区内其他节点之间连接的密度与预期连接的差异。具体而言，模块度定义如下：
+   $$
+   Q = \frac{1}{2m} \sum_{ij} \left( A_{ij} - \frac{k_i k_j}{2m} \right) \delta(c_i, c_j)
+   $$</li>
+</ol>
+<p>其中，<span class="arithmatex">\(A_{ij}\)</span>是网络中节点<span class="arithmatex">\(i\)</span>和<span class="arithmatex">\(j\)</span>之间的边权重，<span class="arithmatex">\(k_i\)</span>和<span class="arithmatex">\(k_j\)</span>分别是节点<span class="arithmatex">\(i\)</span>和<span class="arithmatex">\(j\)</span>的度（即相连边的数量），<span class="arithmatex">\(m\)</span>是网络中所有边的总权重之和，<span class="arithmatex">\(c_i\)</span>和<span class="arithmatex">\(c_j\)</span>是节点<span class="arithmatex">\(i\)</span>和<span class="arithmatex">\(j\)</span>所在的社区，<span class="arithmatex">\(\delta(c_i, c_j)\)</span>是Kronecker符号，当<span class="arithmatex">\(c_i = c_j\)</span>时为1，否则为0。</p>
+<ol>
+<li><strong>初始化</strong>：将每个节点视为一个单独的社区，形成初始的社区划分。</li>
+<li><strong>迭代优化</strong>：在每一轮迭代中，遍历网络中的每个节点，计算将该节点移动到相邻社区中所带来的模块度变化。节点会被移动到能够最大化模块度增加的邻居社区中。这个过程会迭代多次，直到不再有节点可以移动为止。</li>
+<li><strong>合并社区</strong>：在每一轮迭代中，可以将模块度增加的节点所在的社区与目标社区合并，以形成更大的社区结构。这有助于减少社区的数量并简化社区结构。</li>
+<li><strong>终止条件</strong>：迭代优化过程会一直进行，直到不再有节点可以被移动为止。在这种情况下，算法收敛，形成最终的社区划分。</li>
+<li><strong>后处理</strong>：通常，可以对社区划分进行后处理，例如合并具有相似特征或功能的社区，以进一步简化社区结构。</li>
+</ol>
+<p><img alt="late" src="../pic/late.png" /></p>
+<p><img alt="early" src="../pic/early.png" /></p>
+<p>​                              晚期基因共表达网络                                                                           早期基因共表达网络</p>
+<p>早期第0类的节点数据表示（部分）：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Node</th>
+<th style="text-align: left;">Module</th>
+<th style="text-align: left;">Gene</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">ARHGEF10L</td>
+</tr>
+<tr>
+<td style="text-align: left;">26</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">SMAD7</td>
+</tr>
+<tr>
+<td style="text-align: left;">55</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">FER1L4</td>
+</tr>
+<tr>
+<td style="text-align: left;">62</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">NSUN6</td>
+</tr>
+<tr>
+<td style="text-align: left;">64</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">ERGIC3</td>
+</tr>
+</tbody>
+</table>
+<p>晚期第0类节点数据展示（部分）：</p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Module</th>
+<th>Gene</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>ARHGEF10L</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0</td>
+<td>DHX9</td>
+</tr>
+<tr>
+<td>12</td>
+<td>0</td>
+<td>ITGA1</td>
+</tr>
+<tr>
+<td>16</td>
+<td>0</td>
+<td>TACO1</td>
+</tr>
+<tr>
+<td>22</td>
+<td>0</td>
+<td>GPSM2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">基因共表达网络分析<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>基于上述建立的基因共表达网络，可以开始分析基因之间的关系，在生物药理学中，基因之间存在的关系有：</p>
+<ul>
+<li><strong>共表达关系（Co-expression）：</strong> 如果两个基因在不同条件下表达的模式具有高度的相似性，那么它们之间存在共表达关系。共表达关系可能暗示着这两个基因在相同的生物过程中发挥类似的功能。</li>
+<li><strong>共同调控关系（Co-regulation）：</strong> 一些基因可能由相同的转录因子或调控网络调控，因此它们之间可能存在共同调控关系，即它们的表达受到相似的调控因子的影响。</li>
+</ul>
+<p><strong>共表达关系分析</strong></p>
+<p>基因表达数据的相关系数作为共表达关系的衡量方法。计算基因表达数据的相关系数矩阵，然后根据设置的阈值筛选出相关系数大于阈值的基因对，将它们作为共表达的关系。分别对早期和晚期的基因表达数据进行计算，部分结果如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>Gene1(late)</th>
+<th>Gene2(late)</th>
+<th>Correlation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KRT6B</td>
+<td>S100A2</td>
+<td>0.9935</td>
+</tr>
+<tr>
+<td>GPD1</td>
+<td>PLIN1</td>
+<td>0.969674</td>
+</tr>
+<tr>
+<td>ADIPOQ</td>
+<td>HSPB1</td>
+<td>0.967722</td>
+</tr>
+<tr>
+<td>KRT14</td>
+<td>KRT6B</td>
+<td>0.965035</td>
+</tr>
+<tr>
+<td>LIPE</td>
+<td>GPD1</td>
+<td>0.964958</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Gene1(early)</th>
+<th>Gene2(early)</th>
+<th>Correlation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LIPG</td>
+<td>PTN</td>
+<td>0.998122</td>
+</tr>
+<tr>
+<td>ATP1A1</td>
+<td>KCTD14</td>
+<td>0.986526</td>
+</tr>
+<tr>
+<td>SLPI</td>
+<td>KCTD14</td>
+<td>0.98634</td>
+</tr>
+<tr>
+<td>CLTC</td>
+<td>C17orf71</td>
+<td>0.984211</td>
+</tr>
+<tr>
+<td>VTCN1</td>
+<td>KCTD14</td>
+<td>0.984185</td>
+</tr>
+</tbody>
+</table>
+<p>这些基因对存在显著的共表达关系。</p>
+<p><strong>共同调控关系分析</strong></p>
+<p>基因之间的共同调控关系指的是这些基因在生物学上由相同的调控因子或调控网络所调控。在生物系统中，基因表达受到复杂的调控，其中包括转录因子、miRNA、染色质修饰等调控因子的作用。当两个或多个基因受到相同调控因子的调控时，它们就会表现出共同调控的特征，可能在相同的生物过程中发挥作用，参与相同的通路或功能模块。基于该定义，根据基因共表达网络的定义可以知道，网络中的社区通常对应于具有相似表达模式或相似调控关系的基因集合。这些社区反映了基因之间的共同调控、共同参与的生物过程或功能模块等特征。<strong>所以在网络中的每一类中的基因之间，存在共同调控关系的可能性较大</strong>。</p>
+<h2 id="_7">问题二<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="_8">模型选择<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>问题二需要找出能够作为诊断特征的基因，以此判定或分析患者当前的病理状态。我们考虑将早期、晚期、正常人的基因表达数据随机打乱，通过算法对其进行分类，得出模型分类的依据，即能够作为诊断依据的基因。关于分类算法的选择，我们比较了多层感知机（MLP），支持向量机（SVM）和XGBoost三种算法模型：</p>
+<p><strong>多层感知机（MLP）</strong></p>
+<p>多层感知机（Multilayer Perceptron，MLP）是一种基本的人工神经网络（Artificial Neural Network，ANN）架构，用于解决分类和回归问题。它由多个神经元组成的多层结构，每一层都与下一层全连接。MLP由输入层、隐藏层和输出层组成。输入层接收来自数据集的特征向量，隐藏层负责将输入特征映射到更高维的空间，并通过激活函数引入非线性。最后，输出层根据模型任务的不同，可以有不同数量的节点，对于分类问题，输出层通常具有与类别数量相同的节点，每个节点对应一个类别，并输出相应的概率。MLP的训练通常通过反向传播算法（Backpropagation）完成，该算法使用梯度下降法来最小化模型的损失函数。在训练过程中，模型通过不断调整权重和偏差来最小化预测值与真实值之间的误差。</p>
+<p>MLP的优点体现在能够学习复杂的非线性关系，相对于简单的线性模型，MLP能够更好地捕捉数据中的特征。</p>
+<p><strong>支持向量机（SVM）</strong></p>
+<p>支持向量机（Support Vector Machine，SVM）是一种经典的监督学习算法，用于解决分类和回归问题。它的主要思想是找到一个最优的超平面，将不同类别的数据分隔开来，并且尽量保持数据点与超平面之间的间隔最大化。在二分类情况下，SVM试图找到一个决策边界，将两个类别的数据点分开。这个决策边界就是一个超平面，它可以用一个线性方程表示。如果数据不是线性可分的，SVM可以通过使用核函数将数据映射到高维空间中，从而找到一个更复杂的超平面来分割数据。</p>
+<p>SVM的优点在于其在高维空间中表现良好，适用于处理非线性可分的数据。</p>
+<p><strong>XGBoost</strong></p>
+<p>XGBoost（eXtreme Gradient Boosting）是一种高效的、灵活的机器学习算法，主要用于解决分类和回归问题。它是一种基于决策树的集成学习方法，通过集成多个弱分类器（通常是决策树），从而构建一个强大的集成模型。</p>
+<ol>
+<li>
+<p><strong>梯度提升算法（Gradient Boosting）</strong>：XGBoost基于梯度提升算法，通过迭代地训练决策树，每一棵树都试图纠正前面所有树的残差，从而逐步提高模型的预测性能。</p>
+</li>
+<li>
+<p><strong>正则化</strong>：XGBoost引入了正则化项，包括L1和L2正则化，以防止过拟合，提高模型的泛化能力。</p>
+</li>
+<li>
+<p><strong>自定义损失函数</strong>：除了常见的损失函数（如均方误差、交叉熵等），XGBoost还支持用户自定义的损失函数，以适应不同的问题需求。</p>
+</li>
+<li>
+<p><strong>特征重要性评估</strong>：XGBoost可以计算每个特征的重要性，帮助理解模型对特征的使用情况，从而进行特征选择和解释模型。</p>
+</li>
+<li>
+<p><strong>并行化处理</strong>：XGBoost使用了并行化技术，包括多线程和分布式计算，以加速训练过程，特别是在处理大规模数据时效果显著。</p>
+</li>
+<li>
+<p><strong>缺失值处理</strong>：XGBoost能够自动处理输入数据中的缺失值，无需进行额外的预处理。</p>
+</li>
+<li>
+<p><strong>支持分类和回归任务</strong>：XGBoost既适用于分类问题，也适用于回归问题，因此具有广泛的应用范围。</p>
+</li>
+</ol>
+<p>在比较以上三种算法的过程中发现，多层感知机的分类准确性最高，对于筛选出正常人的准确性高达96%，但从模型中提取特征效果不佳，只能很好地按照数据进行分类；采用支持向量机的分类效果一般，对于识别出早期的正确率只有30%；实验中XGBoost表现出了良好的分类效果，从模型中提取特征也相对方便，最终决定使用XGBoost来找出能够被用来作为诊断的标记物的特征基因</p>
+<h3 id="xgboost">XGBoost分类模型的构建<a class="headerlink" href="#xgboost" title="Permanent link">&para;</a></h3>
+<p>Python提供的XGBoost库可以方便地构建出初步的模型。XGBoost的构建过程可以分为初始化模型、计算损失函数的梯度和二阶导数、构建树模型、更新叶子节点权重等几个关键步骤。</p>
+<ol>
+<li><strong>初始化模型参数：</strong> 首先，XGBoost会初始化一些模型参数，如学习率（learning rate）、树的数量（n_estimators）、树的最大深度（max_depth）等。</li>
+<li><strong>计算损失函数的梯度和二阶导数：</strong> XGBoost的优化目标是最小化损失函数，通常使用梯度提升方法进行优化。在每一轮迭代中，XGBoost会计算每个样本的损失函数关于预测值的一阶导数（梯度）和二阶导数（Hessian矩阵），以便构建弱学习器。</li>
+<li><strong>构建树模型：</strong> XGBoost通过迭代地添加新的树来逼近损失函数的负梯度。在每一轮迭代中，XGBoost会构建一棵回归树，该树的结构是通过贪心地最小化当前节点的损失函数和正则项得到的。构建树的过程中，XGBoost会使用特征的子集，以增加模型的随机性，并减少过拟合。</li>
+<li><strong>更新叶子节点权重：</strong> 在构建完树模型后，XGBoost会使用一阶和二阶导数来更新每个叶子节点的权重，以最小化损失函数。这个更新过程是通过梯度下降法实现的，同时也会考虑到模型的正则化项，如树的叶子节点权重的L1和L2正则化。</li>
+<li><strong>重复迭代：</strong> XGBoost会重复执行构建树和更新叶子节点权重的步骤，直到达到预先设定的迭代次数或损失函数的改善不再显著。</li>
+<li><strong>集成弱学习器：</strong> 最后，XGBoost会将所有构建的树模型进行加权集成，得到最终的强学习器模型。</li>
+</ol>
+<p>尝试用XGBoost对打乱的正常、早期、晚期数据进行学习与分类，将数据集划分为训练集、验证集和测试集，其中训练集占比___，验证集占比---，测试集占比---。确保三个数据集在目标变量的分布上保持一致。得到如下结果：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>precision</th>
+<th>recall</th>
+<th>f1-score</th>
+<th>support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正常人</td>
+<td>0.96</td>
+<td>1</td>
+<td>0.98</td>
+<td>23</td>
+</tr>
+<tr>
+<td>早期患者</td>
+<td>0.77</td>
+<td>0.73</td>
+<td>0.75</td>
+<td>22</td>
+</tr>
+<tr>
+<td>晚期患者</td>
+<td>0.62</td>
+<td>0.66</td>
+<td>0.64</td>
+<td>35</td>
+</tr>
+<tr>
+<td>accuracy</td>
+<td></td>
+<td></td>
+<td>0.66</td>
+<td>80</td>
+</tr>
+<tr>
+<td>macro avg</td>
+<td>0.65</td>
+<td>0.66</td>
+<td>0.65</td>
+<td>80</td>
+</tr>
+<tr>
+<td>weighted avg</td>
+<td>0.65</td>
+<td>0.66</td>
+<td>0.65</td>
+<td>80</td>
+</tr>
+</tbody>
+</table>
+<h3 id="xgboost_1">XGBoost分类的准确性评估<a class="headerlink" href="#xgboost_1" title="Permanent link">&para;</a></h3>
+<p>为了评估XGBoost分类的准确性，我们选用绘制ROC曲线来展示和说明。</p>
+<p>ROC曲线，全称为“受试者工作特征曲线”（Receiver Operating Characteristic curve），是一种评估二分类问题中分类器性能的图形工具。它通过描绘在不同阈值下分类器的真阳性率（True Positive Rate, TPR）和假阳性率（False Positive Rate, FPR）之间的关系来展示分类器的性能。</p>
+<p><strong>真阳性率（TPR）</strong>，也称为敏感性或召回率，表示在所有实际为正例的样本中，模型正确预测为正例的比例。计算公式为：
+$$
+\text{TPR} = \frac{\text{TP}}{\text{TP} + \text{FN}}
+$$
+其中，TP 是真阳性数量，FN 是假阴性数量。</p>
+<p><strong>假阳性率（FPR）</strong>，表示在所有实际为负例的样本中，模型错误预测为正例的比例。计算公式为：
+$$
+\text{FPR} = \frac{\text{FP}}{\text{FP} + \text{TN}}
+$$
+其中，FP 是假阳性数量，TN 是真阴性数量。</p>
+<p>ROC曲线的横坐标是FPR，纵坐标是TPR。曲线下的面积被称为AUC（Area Under the Curve），它是一个介于0和1之间的值，用于量化分类器的整体性能。AUC值越接近1，表示分类器的性能越好；AUC值越接近0.5，表示分类器的性能接近随机猜测。一般来说，AUC-ROC值越高，模型的性能越好；ROC曲线越靠近左上角，表示模型在保持低FPR的同时实现了高TPR。</p>
+<p><img alt="bf0833dfec8cec678a8b93361e8f33e" src="../pic/ROC.png" /></p>
+<p>从图中可以看出，我们所构建的XGBoost模型判断早期、晚期患者的效果显著。</p>
+<h3 id="shap">基于SHAP机器学习解释器的特征分析<a class="headerlink" href="#shap" title="Permanent link">&para;</a></h3>
+<p>前述过程已经建立好了可以通过分析基因表达数据判断患者患病情况的XGBoost分类模型，想要提取该模型中对基因表达数据的分类依据，即基因表达数据的特征，我们选用SHAP机器学习解释性框架来对XGBoost模型进行特征分析</p>
+<p>SHAP（SHapley Additive exPlanations）是一个流行的机器学习解释性框架，它基于合作博弈论中的Shapley值来解释模型预测。Shapley值是一种公平分配游戏中奖励的方法，SHAP利用这一概念来分配每个特征对模型预测的贡献度。以下为SHAP分析的过程：</p>
+<ol>
+<li><strong>训练XGBoost模型</strong>：前文已经建立好了可以通过分析基因表达数据判断患者患病情况的XGBoost分类模型，可以用于进行分类和预测。</li>
+<li><strong>创建SHAP解释器</strong>：使用SHAP库中的<code>TreeExplainer</code>类创建一个解释器对象。这个对象接受XGBoost模型作为输入。</li>
+<li><strong>计算SHAP值</strong>：使用解释器对象的<code>shap_values</code>方法来计算特征的SHAP值。用XGBoost模型作为输入，并返回一个与数据集同样形状的数组，其中包含了每个样本的每个特征对预测结果的贡献值。</li>
+<li><strong>解释SHAP值</strong>：SHAP值可以帮助理解每个特征是如何影响每个预测结果的。一个正的SHAP值表示该特征对预测结果有正向影响，而一个负的SHAP值表示有负向影响。</li>
+<li><strong>可视化SHAP值</strong>：SHAP库提供了多种可视化工具来帮助解释这些值。本文选用<code>summary_plot</code>，其可以显示所有特征对所有样本预测的平均影响，<code>force_plot</code>可以显示单个样本的特征贡献。</li>
+</ol>
+<p>将每个基因对应的SHAP值进行排序并输出，得到下图所示数据：</p>
+<p><img alt="74a5b7915c7ac86b23f8b7d9d23de8e" src="../pic/shap2.png" /></p>
+<p><img alt="b9dc53b23c8b97ac8004bf2b6bc38e3" src="../pic/shap1.png" /></p>
+<p>图一为力图（Force Plot）：力图是瀑布图的另一种形式，以直观的方式展示单个样本的特征贡献。红蓝色箭头表示特征对预测结果的影响方向和大小。基准值（base value）和最终预测值（f(x)）在图中标出。</p>
+<p>图二为瀑布图（Waterfall Plot）：瀑布图展示了单个样本的特征贡献。横轴表示SHAP值，纵轴列出了各个特征。蓝色条表示特征对预测有负向影响，红色条表示正向影响。图的底部显示模型的基准值（E[f(x)]），即模型预测的平均值。从图底向上看，每个条形的长度表示该特征对预测结果的贡献大小。</p>
+<p>根据SHAP机器学习解释器框架给出的每个基因的SHAP值排序，我们可以得出SPRY2、PPP1R12B、SCN4B、TMEM220、SDPR等基因在XGBoost模型进行分类时起到了较为显著的作用，它们可以看作是判断早晚期的特征基因，例如，当观测到SPRY2比以前有明显的减少，就可以说明患者有偏向晚期的疾病演化趋势；当观测到S100B比以前有明显的增加，就可以说明患者有从正常偏向早期的疾病演化趋势。</p>
+<h3 id="_9">诊断标记物的识别准确性分析<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>为分析诊断标记物的识别准确性，我们将筛选出的基因从原始基因表达数据中提取出来，只对这些具有显著影响的基因应用XGBoost进行分类。结果显示，只采用这些基因来判断早期、晚期、正常人的效果比采用所有数据判断的准确性要高，其中前文提到的SPRY2基因用于对正常人进行判断的准确性高达94%，KANK1基因对于判断早期患者的正确率最高，同时其对于晚期患者的准确性高达70%</p>
+<p><img alt="屏幕截图 2024-05-04 204506" src="E:\桌面\2024数模校赛\pic\屏幕截图 2024-05-04 204506.png" /></p>
+<h2 id="_10">问题三<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>问题三提到不同的患者之间存在着极强的异质性，需要在分析过程中尽可能的消除异质性的影响。异质性是指在一个群体、材料或数据集中存在的差异或多样性。它可以出现在个体层面上，也可以是群体层面上的总体异质性。在社会科学、生物学和医学等领域，异质性是一个常见的现象，它可以源于遗传、环境、社会经济因素、随机事件等多种原因。根据异质性产生的原因，本文从以下几点分析讨论异质性消除的方法：</p>
+<h3 id="meta"><strong>Meta回归和混合效应模型</strong><a class="headerlink" href="#meta" title="Permanent link">&para;</a></h3>
+<p>由于题中所给数据仅有患者编号和基因名称，导致异质性来源不明确，我们使用Meta回归分析来探索可能影响效应大小的患者。Meta回归分析是一种统计方法，用于合并多个独立研究的结果，以估计变量间的效应大小。它通常用于汇总多个研究的数据，以获得更可靠、更准确的估计值。通过Meta回归分析，可以找出异质性体现明显的患者，也就是说，他们的基因表达数据不能很好的契合分类模型，最后通过调查这些患者的其他信息如年龄，性别，遗传病史等来确定异质性的来源。本文使用Python中的<code>statsmodels</code>库进行Meta回归分析。</p>
+<p>Meta回归分析步骤：</p>
+<ol>
+<li><strong>数据提取</strong>：读入题中所给基因表达数据，包括作为因变量的统计量（如参数估计量、显著性、t统计量等）。</li>
+<li><strong>模型建立</strong>：建立相应的回归模型，检验各自变量对因变量的影响。</li>
+<li><strong>回归分析</strong>：采用适当的回归方法（如最小二乘法、最大似然法等）进行分析，我们选用普通最小二乘回归（Ordinary Least Squares, OLS）以确定哪些协变量与研究结果的异质性有关。</li>
+</ol>
+<p>下图为标号为TCGA-A8-A079-01患者的数据表单，在这个回归结果中，我们可以查看条件数（Cond. No.）来判断自变量之间的共线性。共线性是指自变量之间存在高度相关性的情况，这可能会导致回归系数估计不准确，增加参数估计的不稳定性。条件数是一个指标，用于衡量自变量矩阵的条件（condition）的大小，其值越大，表示共线性越严重。通常，当条件数大于30时，就表明存在较严重的共线性问题。可以看到条件数的值远远超过了标准值，表明该患者存在较严重的共线性问题。因此，可以推断在这个患者身上，自变量之间可能存在较严重的相关性，即存在异质性。</p>
+<p><img alt="image-20240504131250162" src="../pic/Meta.png" /></p>
+<p>由Meta回归分析找出的异质性表现最显著的患者为TCGA-A8-A09G-01、TCGA-AQ-A04H-01、TCGA-A8-A079-01、TCGA-BH-A0BA-01、TCGA-A8-A06T-01。后续研究者可以着重关注这些患者的基本信息，找出能消除异质性的分类信息以提高诊断正确性。</p>
+<h3 id="_11">亚组分析<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>对不同的患者亚组进行单独分析，然后比较这些亚组之间的结果。这有助于识别特定亚组中的模式，也可以揭示潜在的异质性来源。</p>
+<h3 id="_12">严格的样本选择和分层<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>由于题中所给的数据只有患者的编号，没有具体的患者性别，年龄等基本信息，而这些信息可以作为初步分类的标准，并且这些因素可能会导致基因表达数据的差异。所以在实验设计阶段，通过设定严格的入选和排除标准来控制异质性。例如，可以根据年龄、性别、疾病阶段等因素对样本进行分层，以确保每个子组内部的同质性。</p>
+<h3 id="_13">其他可行的方法<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>在数据分析阶段，可以使用统计模型对已知的混杂因素进行调整，如可以使用协变量分析（ANCOVA）或多变量回归模型来控制这些变量的影响。</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 10, 2024</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 10, 2024</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c.67 0 1.32.12 1.94.33L13 9.35l-4 5 3 7M16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35l-1-7 4.5-5-2.65-5.08C13.87 3.47 15.17 3 16.5 3Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E7%AC%AC%E4%BA%8C%E7%AB%A0/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 计算方法第二章">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                计算方法第二章
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../LaTeX%20related/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%B8%AD%E7%9A%84LaTeX%E4%BB%A3%E7%A0%81/" class="md-footer__link md-footer__link--next" aria-label="Next: 数学建模中的LaTeX代码">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                数学建模中的LaTeX代码
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Wayne
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Q1ucheng" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/2001723051?spm_id_from=333.1007.0.0" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://ronaldln.github.io/MyPamphlet/" target="_blank" rel="noopener" title="ronaldln.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.7l167.6-182.9c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "admonition", "navigation.footer", "navigation.tabs", "navigation.sections", "navigation.path", "toc.follow", "content.tabs.link", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+        <script src="../../../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

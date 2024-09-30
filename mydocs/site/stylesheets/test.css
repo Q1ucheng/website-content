@@ -1,0 +1,27 @@
+.wrapper {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing {
+  width: 30em; height: 1.5em;
+  border-right: 1px solid transparent;
+  animation: typing 5s steps(37, end), blink-caret .75s step-end infinite;
+  font-family: JetBrains Mono;
+  font-size: 22px;
+  word-wrap: break-all;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 30em; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: currentColor; }
+}

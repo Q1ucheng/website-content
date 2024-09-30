@@ -1,0 +1,53 @@
+body {
+    font-family: "LXGW WenKai", sans-serif;
+    /* Lite version */
+    /* font-family: "LXGW WenKai Lite", sans-serif; */
+    /* TC version */
+    /* font-family: "LXGW WenKai TC", sans-serif; */
+    /* Screen version */
+    /* font-family: "LXGW WenKai Screen", sans-serif; */
+  }
+
+:root {
+  --md-text-font: "JetBrains Mono", "LXGW WenKai Screen"; 
+  --md-code-font: "JetBrains Mono";
+}
+
+/* 强制文本加粗效果 */
+strong, b {
+  font-weight: bold;
+}
+
+[data-md-color-scheme="youtube"] {
+  --md-primary-fg-color:        #000000;
+  --md-primary-fg-color--light: #000000;
+  --md-primary-fg-color--dark:  #000000;
+}
+
+.wrapper {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing {
+  width: 30em; height: 1.5em;
+  border-right: 1px solid transparent;
+  animation: typing 5s steps(37, end), blink-caret .75s step-end infinite;
+  font-family: JetBrains Mono;
+  font-size: 22px;
+  word-wrap: break-all;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 30em; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: currentColor; }
+}
